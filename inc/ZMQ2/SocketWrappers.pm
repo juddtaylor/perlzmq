@@ -474,4 +474,17 @@ sub close {
 }
 )}
 
+sub socket_monitor_tt {q(
+sub socket_monitor {
+    my ($self) = @_;
+
+    [% closed_socket_check %]
+
+    $self->bad_version(
+        $self->verstr,
+        "socket_monitor not available in < zmq 4.x"
+    );
+}
+)}
+
 1;

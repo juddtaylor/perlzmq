@@ -102,6 +102,7 @@ requires qw(
     get
     set
     close
+    socket_monitor
 );
 
 1;
